@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/styles.css"> 
+    
+    <style>
+        /* Specific styles for this page to match the image */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5; /* Light grey background */
+        }
+        .header-bar {
+            background-color: #008080; /* Teal color for the header */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-bar .brand-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .header-bar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1em;
+        }
+        .header-bar .nav-links a.active {
+            font-weight: bold; /* Indicate active link */
+            text-decoration: underline;
+        }
+        .contact-container {
+            max-width: 900px; /* Wider container */
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex; /* Use flexbox for layout */
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            gap: 30px; /* Space between columns */
+        }
+        .contact-icon {
+            flex-shrink: 0; /* Don't let the icon shrink */
+            padding-right: 20px; /* Space to the right of the icon */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px; /* Give some width to the icon area */
+        }
+        .contact-icon svg {
+            width: 100px; /* Size for the SVG icon */
+            height: 100px;
+            fill: #008080; /* Teal color for the icon */
+        }
+        .contact-details {
+            flex-grow: 1; /* Allow details to take remaining space */
+            border-left: 1px solid #ccc; /* Vertical separator */
+            padding-left: 30px;
+        }
+        .contact-details p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 10px; /* Closer spacing between lines */
+        }
+        .contact-details a {
+            color: #007bff; /* Blue for links */
+            text-decoration: none;
+        }
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <span class="brand-name">Dealerships</span>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/contact" class="active">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="none"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" fill="none"/>
+                <path d="M12 11c1.66 0 3-1.34 3-3V6c0-1.66-1.34-3-3-3S9 4.34 9 6v2c0 1.66 1.34 3 3 3zm7 0v1c0 3.31-2.69 6-6 6h-2c-3.31 0-6-2.69-6-6v-1h2v1c0 2.21 1.79 4 4 4h2c2.21 0 4-1.79 4-4v-1h2z"/>
+                <path d="M12 11c1.66 0 3-1.34 3-3V6c0-1.66-1.34-3-3-3S9 4.34 9 6v2c0 1.66 1.34 3 3 3zm7 0v1c0 3.31-2.69 6-6 6h-2c-3.31 0-6-2.69-6-6v-1h2v1c0 2.21 1.79 4 4 4h2c2.21 0 4-1.79 4-4v-1h2z" fill="#008080"/>
+            </svg>
+        </div>
+        <div class="contact-details">
+            <p>Contact Customer Service<br><a href="mailto:support@bestcars.com">support@bestcars.com</a></p>
+            <p>Contact our National Advertising team<br><a href="mailto:NationalSales@bestcars.com">NationalSales@bestcars.com</a></p>
+            <p>Contact our Public Relations team<br><a href="mailto:PR@bestcars.com">PR@bestcars.com</a></p>
+            <p>Contact the bestcars.com offices<br>312-611-1111</p>
+            <p>Become a bestcars.com car dealer<br><a href="https://www.growwithbestcars.com">Visit growwithbestcars.com</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
