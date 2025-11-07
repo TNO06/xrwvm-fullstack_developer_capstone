@@ -57,19 +57,44 @@ app.get('/fetchReviews/dealer/:id', async (req, res) => {
 });
 
 // Express route to fetch all dealerships
+// Express route to fetch all dealerships
 app.get('/fetchDealers', async (req, res) => {
-//Write your code here
-});
-
-// Express route to fetch Dealers by a particular state
-app.get('/fetchDealers/:state', async (req, res) => {
-//Write your code here
-});
-
-// Express route to fetch dealer by a particular id
-app.get('/fetchDealer/:id', async (req, res) => {
-//Write your code here
-});
+    try {
+      // FIX: Changed Dealer to Dealerships
+      const dealers = await Dealerships.find();
+      res.json(dealers);
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch dealers' });
+    }
+  });
+  
+  // Express route to fetch Dealers by a particular state
+  app.get('/fetchDealers/:state', async (req, res) => {
+    try {
+      // FIX: Changed Dealer to Dealerships
+      const dealers = await Dealerships.find({ state: req.params.state });
+      if (dealers.length === 0) {
+        return res.status(404).json({ error: 'No dealers found in this state' });
+      }
+      res.json(dealers);
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch dealers' });
+    }
+  });
+  
+  // Express route to fetch dealer by a particular id
+  app.get('/fetchDealer/:id', async (req, res) => {
+    try {
+      // FIX: Changed Dealer to Dealerships
+      const dealer = await Dealerships.findOne({ id: req.params.id });
+      if (!dealer) {
+        return res.status(404).json({ error: 'Dealer not found' });
+      }
+      res.json(dealer);
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to fetch dealer details' });
+    }
+  });
 
 //Express route to insert review
 app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
